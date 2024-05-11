@@ -302,6 +302,15 @@ vector<vector<int>> graph3 = {
 {0, 0, 0, 0, 0,}};
   g.loadGraph(graph3);
   CHECK(ariel::Algorithms::isContainsCycle(g) == "0");
+//the same graoh like graph3 but undirected
+  vector<vector<int>> graph4 = {
+  { 0, -3, 0, -3, 0}, 
+  {-3, 0, -3, 0, 0}, 
+  {0, -3, 0, -3, 0}, 
+  {-3, 0, -3, 0, -3}, 
+{0, 0, 0, -3, 0,}};
+  g.loadGraph(graph4);
+  CHECK(ariel::Algorithms::isContainsCycle(g) == "0 -> 3 -> 2 -> 1 -> 0");
 
   
 
